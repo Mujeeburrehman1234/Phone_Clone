@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Phone_Clone</string>
+    <string name="value">Allow other devices connect with you and to transfer data files allow this application to fully access your storage</string>
 </resources>

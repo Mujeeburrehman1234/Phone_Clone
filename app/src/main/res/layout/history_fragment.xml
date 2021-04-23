@@ -1,64 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
      android:background="@color/bg"
+    android:id="@+id/history_fragment"
     >
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="649dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/linerar_layout_border"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
         >
+
+
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_receive"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/layout_receive"
-            android:padding="10dp"
-           android:gravity="center"
-            >
+            android:gravity="center"
+            android:padding="10dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Receives"
-                android:textColor="@color/light_blue"
-                />
+                android:textColor="@color/light_blue" />
 
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/light_blue" />
+
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_sent"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/layout_sent"
-            android:padding="10dp"
             android:gravity="center"
-
-
+            android:padding="10dp"
             >
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sent"
-                android:textColor="@color/light_blue"
-                />
+                android:textColor="@color/light_blue" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/history_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        >
+
+
+    </RelativeLayout>
+</RelativeLayout>

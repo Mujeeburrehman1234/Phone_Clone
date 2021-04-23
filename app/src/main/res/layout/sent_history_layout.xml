@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/sent_history_layout"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sent_history_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:elevation="3dp"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/sent_history_thumb"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:descendantFocusability="blocksDescendants" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/sent_history_checkbox"
+            android:layout_toRightOf="@+id/sent_history_card"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sent_history_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Honey MOON"
+                android:textColor="@color/light_blue"
+                android:textSize="13dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"
+
+                />
+
+            <TextView
+                android:id="@+id/sent_history_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="12.8 MB"
+                android:textColor="@color/light_blue"
+                android:textSize="11dp" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/sent_history_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:button="@drawable/custom_checkbox"
+            android:buttonTint="@color/light_blue"
+            android:scaleX="1.7"
+            android:scaleY="1.7" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/light_blue"
+        />
+</LinearLayout>

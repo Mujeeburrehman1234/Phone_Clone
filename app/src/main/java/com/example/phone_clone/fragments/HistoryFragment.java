@@ -39,7 +39,6 @@ public class HistoryFragment extends Fragment {
         sentHistory.setOnClickListener ( new View.OnClickListener () {
             @Override
             public void onClick(View view) {
-                Toast.makeText ( getContext (), "you Clicked sent", Toast.LENGTH_SHORT ).show ();
                 Fragment fragment = new SentHistoryFragment ();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

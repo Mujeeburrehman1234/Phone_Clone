@@ -22,5 +22,11 @@ public class Home_activity extends AppCompatActivity {
                 startActivity(new Intent(Home_activity.this,SerachNetwork.class));
             }
         });
+        recive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home_activity.this,Recieve_network.class));
+            }
+        });
     }
 }

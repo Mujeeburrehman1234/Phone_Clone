@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         viewPagerAdapter.AddFragment (new MusicFragment () ,"Music");
          viewPagerAdapter.AddFragment (new VideoFragment (),"Video");
         viewPagerAdapter.AddFragment (new FilesFragment (),"File");
-
         viewPager.setAdapter ( viewPagerAdapter );
 
     }

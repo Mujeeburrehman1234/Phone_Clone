@@ -46,15 +46,13 @@
             android:textColor="@color/gradient_endColor" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imagesearchnetwork"
             android:layout_width="match_parent"
             android:layout_height="232dp"
             android:layout_below="@+id/textView2"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/home_screen" />
-
-
+            android:src="@drawable/ic_search_network" />
     </RelativeLayout>
 
     <com.google.android.material.card.MaterialCardView

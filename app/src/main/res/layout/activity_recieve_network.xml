@@ -51,7 +51,7 @@
             android:layout_below="@+id/textView2"
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
-            app:srcCompat="@drawable/home_screen" />
+            android:src="@drawable/ic_pair_device" />
 
 
     </RelativeLayout>
@@ -106,6 +106,7 @@
                 android:layout_below="@+id/txt2">
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCancel"
                     android:background="@color/gradient_startColor"
                     android:textColor="@color/text"
                     android:layout_width="wrap_content"
@@ -113,6 +114,7 @@
                     android:text="Cancel" />
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnConnect"
                     android:background="@color/gradient_startColor"
                     android:textColor="@color/text"
                     android:layout_width="wrap_content"

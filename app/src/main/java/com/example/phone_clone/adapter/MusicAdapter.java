@@ -14,12 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.phone_clone.R;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import Model.Track;
 
 public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder>{
-    ArrayList<String> musicList;
+    List<Track> musicList;
     Context mContext;
 
-    public MusicAdapter(ArrayList<String> musicList, Context context) {
+    public MusicAdapter(List<Track> musicList, Context context) {
         this.musicList = musicList;
         mContext = context;
     }
@@ -36,8 +39,13 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.musicTile.setText (musicList.get ( position ));
-
+        final int pos=position;
+        final String text = musicList.get(position).getTitle();
+        final String size = musicList.get(position).getSize();
+        final String length = musicList.get(position).getLength();
+        holder.title.setText(text);
+        holder.size.setText(size);
+        holder.length.setText(length);
     }
 
     @Override
@@ -46,14 +54,18 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
-        ImageView musicImage;
-        TextView musicTile,musicFileSize;
-        CheckBox musicCheckbox;
+
+       public CheckBox musicCheckbox;
+        public TextView title;
+        public  TextView size;
+        public TextView length;
+        public ImageView musicIcon;
         public ViewHolder(@NonNull View itemView) {
             super ( itemView );
-          musicImage = itemView.findViewById ( R.id.music_thumb );
-          musicTile = itemView.findViewById ( R.id.music_title );
-          musicFileSize = itemView.findViewById ( R.id.music_size );
+          musicIcon = itemView.findViewById ( R.id.music_thumb );
+          title = itemView.findViewById ( R.id.music_title );
+          size = itemView.findViewById ( R.id.music_size );
+          length=itemView.findViewById(R.id.music_lenght);
 
         }
     }

@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Sending">
+
+
     <LinearLayout
 
         android:id="@+id/linearLayout3"
@@ -13,8 +15,10 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/materialCardView2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.097">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -42,18 +46,44 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView2"
-        android:layout_width="317dp"
-        android:layout_height="130dp"
-        android:layout_margin="25dp"
+        android:layout_width="316dp"
+        android:layout_height="134dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
         app:cardBackgroundColor="@color/gradient_startColor"
         app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="470dp">
+        app:layout_constraintTop_toTopOf="parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ProgressBar
+                android:id="@+id/mf_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="250dp"
+                android:layout_height="25dp"
+                android:progress="50"
+                android:progressDrawable="@drawable/custom_progresbar" />
+        </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/recyclerview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialCardView2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

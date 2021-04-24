@@ -11,16 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.phone_clone.R;
 
 import java.util.ArrayList;
+import java.util.List;
+
+import Model.Video;
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
-    ArrayList<String> VideosList;
+    List<Video> VideosList;
     Context mContext;
 
 
-    public VideoAdapter(ArrayList<String> videosList, Context context) {
+    public VideoAdapter(Context context,List<Video> videosList) {
         VideosList = videosList;
         mContext = context;
     }
@@ -36,9 +40,14 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        try {
+            Glide.with(mContext).load(VideosList.get(position).getPath())
+                    .placeholder(R.drawable.ic_launcher_foreground).centerCrop()
+                    .into(holder.videoImage);
+        } catch (Exception e) {
 
-        holder.videoTile.setText ( VideosList.get ( position ) );
-
+        }
+        holder.videoTile.setText(VideosList.get(position).getTitle());
     }
 
     @Override

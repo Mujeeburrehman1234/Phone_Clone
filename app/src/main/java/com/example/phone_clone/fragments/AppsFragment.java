@@ -33,7 +33,7 @@ public class AppsFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=  inflater.inflate ( R.layout.apps_fragment ,container,false);
-        mRecyclerView=view.findViewById(R.id.myrecyclerview);
+        mRecyclerView=view.findViewById(R.id.recycler);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(),4));
         asyn = new AsyncTaskRunner();
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB)

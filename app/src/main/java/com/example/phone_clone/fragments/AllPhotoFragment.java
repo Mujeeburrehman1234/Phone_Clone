@@ -50,7 +50,7 @@ public class AllPhotoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_all_photo, container, false);
-        mRecyclerView = view.findViewById(R.id.photorecyclerview);
+        mRecyclerView = view.findViewById(R.id.recycler);
         mRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3));
         if (ContextCompat.checkSelfPermission(getContext(),
                 Manifest.permission.READ_EXTERNAL_STORAGE)

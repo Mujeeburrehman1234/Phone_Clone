@@ -32,7 +32,7 @@ public class SentHistoryFragment extends Fragment {
         mRecyclerView = view.findViewById ( R.id.recycler );
         mRecyclerView.setLayoutManager ( new LinearLayoutManager (getContext ()) );
         sentList= new ArrayList<> ();
-        sentList.add ( "On My Way" );
+        sentList.add ( "Diamond Heart" );
         sentList.add ( "Lily" );
         sentList.add ( "Sing me to sleep" );
         sentList.add ( "Diamond Heart" );
@@ -41,9 +41,7 @@ public class SentHistoryFragment extends Fragment {
         sentList.add ( "Faded" );
         sentList.add ( "Faded" );
         sentList.add ( "Darkside" );
-
         mSentHistoryAdapter = new SentHistoryAdapter (sentList ,getContext ());
-
         mRecyclerView.setAdapter (mSentHistoryAdapter );
 
         return view;

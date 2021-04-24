@@ -11,7 +11,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.provider.MediaStore;
@@ -26,7 +25,7 @@ import com.example.phone_clone.adapter.AllimageAdapter;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.Image;
+import com.example.phone_clone.Model.Image;
 
 
 public class AllPhotoFragment extends Fragment {

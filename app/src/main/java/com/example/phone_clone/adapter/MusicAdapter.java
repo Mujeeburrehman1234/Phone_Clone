@@ -13,10 +13,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.phone_clone.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import Model.Track;
+import com.example.phone_clone.Model.Track;
 
 public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.ViewHolder>{
     List<Track> musicList;

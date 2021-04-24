@@ -22,7 +22,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.AppIication;
+import com.example.phone_clone.Model.AppIication;
 
 public class AppsFragment extends Fragment {
     public AppsFragment() {

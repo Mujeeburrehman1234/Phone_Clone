@@ -1,7 +1,6 @@
 package com.example.phone_clone.adapter;
 
 import android.app.Activity;
-import android.app.Application;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +15,7 @@ import com.example.phone_clone.R;
 
 import java.util.List;
 
-import Model.AppIication;
+import com.example.phone_clone.Model.AppIication;
 
 public class ApplicationAdapter extends RecyclerView.Adapter<ApplicationAdapter.myviewholder> {
     List<AppIication> list;

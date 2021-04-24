@@ -14,10 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.phone_clone.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import Model.Video;
+import com.example.phone_clone.Model.Video;
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
     List<Video> VideosList;

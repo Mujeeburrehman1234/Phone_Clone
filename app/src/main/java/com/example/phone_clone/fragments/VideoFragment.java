@@ -17,14 +17,13 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.phone_clone.R;
-import com.example.phone_clone.adapter.MusicAdapter;
 import com.example.phone_clone.adapter.VideoAdapter;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import Model.Video;
+import com.example.phone_clone.Model.Video;
 
 public class VideoFragment extends Fragment {
     RecyclerView mRecyclerView;

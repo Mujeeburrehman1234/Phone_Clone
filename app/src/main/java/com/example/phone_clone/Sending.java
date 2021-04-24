@@ -9,9 +9,8 @@ import android.os.Bundle;
 import com.example.phone_clone.adapter.FileReciveAdapter;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import Model.FileToSendPath;
+import com.example.phone_clone.Model.FileToSendPath;
 
 public class Sending extends AppCompatActivity {
 RecyclerView recyclerView;

@@ -1,7 +1,6 @@
 package com.example.phone_clone.fragments;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.phone_clone.R;
@@ -23,7 +21,7 @@ import com.example.phone_clone.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import Model.Image;
+import com.example.phone_clone.Model.Image;
 
 public class PhotoFragment extends AllPhotoFragment {
 

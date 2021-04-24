@@ -1,78 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/bg"
-    >
-
+    android:background="@color/bg">
     <LinearLayout
+        android:layout_centerHorizontal="true"
+        android:id="@+id/layout1"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginBottom="649dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_linear_layout"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/linerar_layout_border"
-        >
+        app:layout_constraintTop_toTopOf="parent">
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_allphoto"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/layout_receive"
-            android:padding="10dp"
             android:gravity="center"
             android:orientation="horizontal"
-            >
+            android:padding="10dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_gallery_files"
+                android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginEnd="5dp" />
+                android:src="@drawable/ic_gallery_files" />
             <TextView
+                android:id="@+id/photo_list_Count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="14"
-                android:textColor="@color/light_blue"
-                android:id="@+id/photo_list_Count"
                 android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp" />
-
-
+                android:layout_marginLeft="5dp"
+                android:text="14"
+                android:textColor="@color/light_blue" />
         </androidx.appcompat.widget.LinearLayoutCompat>
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/light_blue" />
         <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_folderphoto"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:id="@+id/layout_sent"
-            android:padding="10dp"
             android:gravity="center"
-            >
+            android:padding="10dp">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_gallery_folder"
+                android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginEnd="5dp" />
+                android:src="@drawable/ic_gallery_folder" />
             <TextView
+                android:id="@+id/photo_file_list_Count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
-                android:textColor="@color/light_blue"
-                android:id="@+id/photo_fil_list_Count"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                />
-
+                android:text="4"
+                android:textColor="@color/light_blue" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-
-
     </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" />
+</RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -33,7 +33,6 @@ public class VideoFragment extends Fragment {
 
     public VideoFragment() {
     }
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -44,7 +43,6 @@ public class VideoFragment extends Fragment {
         asyn.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         return mView;
     }
-
     private List<Video> getAllShownVideoPath(Context activity) {
         Uri uri;
         Cursor cursor;

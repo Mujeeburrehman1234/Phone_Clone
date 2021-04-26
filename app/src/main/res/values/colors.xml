@@ -16,5 +16,6 @@
     <color name="other2">#8ACB88</color>
     <color name="bg">#FFFEFE</color>
     <color name="Light">#809EC3EA</color>
+    <color name="gray">#808080</color>
 
 </resources>

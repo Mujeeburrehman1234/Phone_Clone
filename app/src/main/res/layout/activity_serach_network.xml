@@ -78,7 +78,10 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/ic_receive" />
+                android:src="@drawable/ic_receive"
+                android:background="@drawable/circular_imageview"
+
+                />
 
             <TextView
                 android:layout_width="150dp"
@@ -91,7 +94,9 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:src="@drawable/ic_connect" />
+                android:src="@drawable/ic_connect"
+
+                />
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>

@@ -42,7 +42,6 @@ public class AppsFragment extends Fragment {
             asyn.execute();
         return view;
     }
-
     private ArrayList<AppIication> getInstalledApps(boolean getSysPackages) {
         ArrayList<AppIication> appsList = new ArrayList<AppIication>();
         //  List<ApplicationInfo> apps = getContext().getPackageManager().getInstalledApplications(0);

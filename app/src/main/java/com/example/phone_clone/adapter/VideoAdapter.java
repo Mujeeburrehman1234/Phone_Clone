@@ -1,12 +1,16 @@
 package com.example.phone_clone.adapter;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.phone_clone.R;
 
+import java.io.File;
 import java.util.List;
+import java.util.Objects;
 
 import com.example.phone_clone.Model.Video;
 
@@ -47,6 +53,20 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder>{
 
         }
         holder.videoTile.setText(VideosList.get(position).getTitle());
+        holder.videoTile.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType(Uri.parse(VideosList.get(position).getPath()),"video/*");
+                try {
+                    mContext.startActivity(intent);
+                } catch (ActivityNotFoundException e) {
+                    Toast.makeText(mContext, "No handler for this type of file.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        } );
+
     }
 
     @Override

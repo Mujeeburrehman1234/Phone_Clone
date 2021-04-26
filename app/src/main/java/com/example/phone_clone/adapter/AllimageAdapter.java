@@ -1,6 +1,8 @@
 package com.example.phone_clone.adapter;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,6 +45,14 @@ this.list=list;
         } catch (Exception e) {
             e.printStackTrace();
         }
+        holder.img.setOnClickListener ( new View.OnClickListener () {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setDataAndType( Uri.parse(list.get(position).getPath()),"image/*");
+                context.startActivity(intent);
+            }
+        } );
     }
 
     @Override
